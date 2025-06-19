@@ -44,8 +44,19 @@ class ExcelFactory extends DocumentFactory {
 
 class FactoryTest {
     public static void main(String[] args) {
-        DocumentFactory factory = new PdfFactory();
-        Document doc = factory.createDocument();
-        doc.open();
+      
+        DocumentFactory pdfFactory = new PdfFactory();
+        Document pdfDoc = pdfFactory.createDocument();
+        pdfDoc.open();
+
+
+        DocumentFactory wordFactory = new WordFactory();
+        Document wordDoc = wordFactory.createDocument();
+        wordDoc.open();
+
+      
+        DocumentFactory excelFactory = new ExcelFactory();
+        Document excelDoc = excelFactory.createDocument();
+        excelDoc.open();
     }
 }
